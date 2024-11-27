@@ -5,6 +5,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -70,6 +71,11 @@ public class CreateuserTest extends TestBase {
     @When("^se dar click en submit$")
     public void se_dar_click_en_submit() throws Throwable {
         Thread.sleep(5000);
+        WebElement debugBar = driver.findElement(By.className("phpdebugbar-header"));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].style.display='none';", debugBar);
+        WebElement submitButton = driver.findElement(By.id("submit"));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", submitButton);
+
         driver.findElement(createuserPage.btnsubmituserLocator).click();
     }
 
