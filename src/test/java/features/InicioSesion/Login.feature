@@ -3,7 +3,7 @@ Feature: Inicio sesión aplicativo Tracking
   quiero iniciar sesión en mi cuenta de tracking
   para poder operar en el aplicativo
 
-  @smoke
+  @smoke2
   Scenario Outline:inicio sesión correcto
     Given que el usuario abre el aplicativo por primera vez accediendo al login
     When digita usuario "<usuario>" y clave "<password>" validos
