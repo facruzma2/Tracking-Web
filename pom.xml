@@ -110,14 +110,15 @@
       </plugins>
     </pluginManagement>
       <plugins>
-          <plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-compiler-plugin</artifactId>
-              <configuration>
-                  <source>8</source>
-                  <target>8</target>
-              </configuration>
-          </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.11.0</version> <!-- Asegúrate de usar la última versión compatible -->
+          <configuration>
+            <source>8</source> <!-- Versión del lenguaje fuente -->
+            <target>8</target> <!-- Versión del bytecode -->
+          </configuration>
+        </plugin>
       </plugins>
 
   </build>
