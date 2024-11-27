@@ -69,6 +69,7 @@ public class CreateuserTest extends TestBase {
 
     @When("^se dar click en submit$")
     public void se_dar_click_en_submit() throws Throwable {
+        Thread.sleep(5000);
         driver.findElement(createuserPage.btnsubmituserLocator).click();
     }
 
