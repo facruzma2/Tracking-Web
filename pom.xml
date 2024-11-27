@@ -24,6 +24,13 @@
       <scope>test</scope>
     </dependency>
 
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.30</version> <!-- Última versión compatible con Java 17 -->
+      <scope>provided</scope>
+    </dependency>
+
     <!-- WebDriverManager -->
     <dependency>
       <groupId>io.github.bonigarcia</groupId>
@@ -102,10 +109,15 @@
       <!-- Maven Surefire Plugin -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.1.2</version>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.11.0</version>
         <configuration>
-          <argLine>--add-opens java.base/java.util=ALL-UNNAMED</argLine>
+          <source>17</source>
+          <target>17</target>
+          <compilerArgs>
+            <arg>--add-opens</arg>
+            <arg>jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
+          </compilerArgs>
         </configuration>
       </plugin>
     </plugins>

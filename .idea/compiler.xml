@@ -11,4 +11,9 @@
       </profile>
     </annotationProcessing>
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="tracking-automation" options="--add-opens jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED" />
+    </option>
+  </component>
 </project>
