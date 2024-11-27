@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         features = "src/test/java/features/InicioSesion/Login.feature",
         glue = ("seleniumgluecode"),
         plugin = {"com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:resources/cucumber-report/tk_Login.html"},
-        tags = {"@smoke"}
+        tags = {"@smoke2"}
 )
 public class Login_Runner {
 }
